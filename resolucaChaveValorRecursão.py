@@ -1,4 +1,4 @@
-#estescrípt tem tempo de compilação, diferença do fim ao inicio(fim - inicio), 0.00107574462890625 neste array de 1335 elementos
+#estescrípt tem tempo de compilação, diferença entre fim ao inicio(fim - inicio), 0.00107574462890625 neste array de 1335 elementos
 
 import time
 inicio = time.time()
