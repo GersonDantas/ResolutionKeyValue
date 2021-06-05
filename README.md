@@ -1,7 +1,7 @@
 ResolutionKeyValue
 <h1>Resolution for Key and Value in Python</h1>
 <h3>Olá, este código está comentado. E como o título fala, é um código pra resolver chave e valor. Separando o array em vários arrays menores.</h3>
-<h4>:muscle:Colaborador(escreveu boa parte kkkk)</h4>
+<h4>:muscle:Colaborador(trouxe a solução por recurção e o problema principal)</h4>
 <a href="https://www.linkedin.com/in/tobias-souza-b82190139" alt="linkedin"/>
  <img src="https://img.shields.io/static/v1?&label=LinkedIn&message=tobias-souza&color=0A66C2&style=for-the-badge&logo=LinkedIn" />
 </a>
