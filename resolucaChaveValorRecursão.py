@@ -14,8 +14,11 @@ def group_pars(arr):
         return pair.append(arr) 
     #Aqui a função faz o tratamento para o caso de números de elementos forem impares
     if len(arr) % 2 != 0:
-        imp = len(arr) -1 #Aqui ele pega o ultimo elemento do array, no caso o tamanho do array -1, pelo array começar no iíndice 0. 
+        imp = len(arr) -1 #Aqui ele pega o ultimo elemento do array, no caso o tamanho do array -1, pelo array começar no iíndice 0.
         pair.append([arr[len(arr)-1]])#Sugestão: Este elemento você pode fazer um tratamento, dizendo que ele é uma chave sem valor
+        #            ["3","a","b","a","b","a","b"]
+        # print(arr)  ↓↓↓
+        #           [["3"]]
         arr.pop(imp)#removo ele do arr pra dar seguimento a recurção
         group_pars(arr)
         return -1
@@ -27,7 +30,7 @@ def group_pars(arr):
         center_max = len(arr)//2 
         #Aqui ele pega o arr que resultará em impar, divide em Dois e coloca os extremos do meio e coloca em outro arr:
         #            ["a","b","a","b","a","b"]
-        #                      ↓↓↓↓↓↓
+        #print(arr)             ↓↓↓↓↓↓
         #          [["a","b"],["a","b"],["a","b"]]
         group_pars(arr[:center_min])
         group_pars([arr[center_min], arr[center_max]])
