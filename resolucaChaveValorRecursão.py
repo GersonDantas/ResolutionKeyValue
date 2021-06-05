@@ -10,21 +10,30 @@ inicio = time.time()
 def group_pars(arr):
     # Este é o caso de parada
     if len(arr) == 2:
+        #ele remonta a arvore de todas as recurções, adicionando no array "pair"
         return pair.append(arr) 
     #Aqui a função faz o tratamento para o caso de números de elementos forem impares
     if len(arr) % 2 != 0:
-        imp = len(arr) -1
-        pair.append([arr[len(arr)-1]])
-        arr.pop(imp)
+        imp = len(arr) -1 #Aqui ele pega o ultimo elemento do array, no caso o tamanho do array -1, pelo array começar no iíndice 0. 
+        pair.append([arr[len(arr)-1]])#Sugestão: Este elemento você pode fazer um tratamento, dizendo que ele é uma chave sem valor
+        arr.pop(imp)#removo ele do arr pra dar seguimento a recurção
         group_pars(arr)
         return -1
+    #esta parte, ele testa se o elemento que vai ser dividido por doisvai retornar um impar. Por exemplo: 14, 6 
     if len(arr)/2 % 2 != 0:
+        #pega o o inteiro da divizão do arr por dois -1
         center_min = len(arr)//2 -1
+        #pega o o inteiro da divizão do arr por dois
         center_max = len(arr)//2 
+        #Aqui ele pega o arr que resultará em impar, divide em Dois e coloca os extremos do meio e coloca em outro arr:
+        #            ["a","b","a","b","a","b"]
+        #                      ↓↓↓↓↓↓
+        #          [["a","b"],["a","b"],["a","b"]]
         group_pars(arr[:center_min])
         group_pars([arr[center_min], arr[center_max]])
         group_pars(arr[center_max+1:])
         return pair
+    #E aqui vai fazendo as divisões, caso passe pelas condicionais
     group_pars(arr[:len(arr)//2])
     group_pars(arr[len(arr)//2:])
     return pair
